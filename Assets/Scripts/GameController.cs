@@ -34,10 +34,11 @@ public class GameController : MonoBehaviour
             GameObject goObj;
             goObj = Instantiate(swordSwing, swordSwingSpawn.transform.position, swordSwingSpawn.transform.rotation);
             goObj.transform.Rotate(new Vector3(0, 0, 90));
-
+            Destroy (goObj, 1);
             timer = 0;
         }
         timer += Time.deltaTime;
+
 
     }
 }
