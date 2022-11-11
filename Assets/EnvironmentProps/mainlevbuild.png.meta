@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f1a9fcae5a96dce47b016ab4a8fb8fce
+guid: 33688d516b8681f48b98de2cf1ee6fe6
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -131,34 +131,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: dungeon_tiles_0
+      name: floor
       rect:
         serializedVersion: 2
-        x: 38
-        y: 278
-        width: 69
-        height: 68
-      alignment: 9
-      pivot: {x: 0.4901607, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fee5c44dd2c78ae43af984af3d644867
-      internalID: 154053826
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dungeon_tiles_1
-      rect:
-        serializedVersion: 2
-        x: 189
-        y: 232
-        width: 14
-        height: 22
+        x: 736
+        y: 160
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8964a705b5a1c0a4c98ba742362a8842
-      internalID: 1753997628
+      spriteID: 9e81b46bde344e849b260513f87542b9
+      internalID: 316480098
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dungeon_tiles_2
+      name: cobble_floor
       rect:
         serializedVersion: 2
-        x: 122
-        y: 310
-        width: 36
-        height: 36
+        x: 736
+        y: 288
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1b432f035608a084b9d3b8ef5f4424fa
-      internalID: 974784050
+      spriteID: 107c85f9ba487fe4f8582c609ae56435
+      internalID: 487325636
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dungeon_tiles_3
+      name: Angstloch
       rect:
         serializedVersion: 2
-        x: 141
-        y: 255
-        width: 19
-        height: 19
+        x: 496
+        y: 272
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,71 +187,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a819139325faaf6429c65acbe4d940c4
-      internalID: 1046208724
+      spriteID: 1bb6a32b7beaf1149adbf1e4db794aae
+      internalID: -198897966
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dungeon_tiles_4
+      name: wall
       rect:
         serializedVersion: 2
-        x: 215
-        y: 203
-        width: 20
-        height: 23
+        x: 368
+        y: 311
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d2353ea167e72e4bbe9c65263c53429
-      internalID: -1812401671
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dungeon_tiles_5
-      rect:
-        serializedVersion: 2
-        x: 191
-        y: 153
-        width: 20
-        height: 22
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 55be31d72c87137489df1035bedf2419
-      internalID: -80867000
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dungeon_tiles_6
-      rect:
-        serializedVersion: 2
-        x: 243
-        y: 312
-        width: 33
-        height: 29
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a0e080699bb64d64eaf6e614be352c34
-      internalID: -1841407498
+      spriteID: 62c83ac6a655ef3459f319b045ca3ada
+      internalID: -643062919
       vertices: []
       indices: 
       edges: []
@@ -288,13 +225,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      dungeon_tiles_2: 974784050
-      dungeon_tiles_3: 1046208724
-      dungeon_tiles_6: -1841407498
-      dungeon_tiles_1: 1753997628
-      dungeon_tiles_4: -1812401671
-      dungeon_tiles_0: 154053826
-      dungeon_tiles_5: -80867000
+      cobble_floor: 487325636
+      wall: -643062919
+      Angstloch: -198897966
+      floor: 316480098
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 
