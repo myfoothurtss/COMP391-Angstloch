@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< Updated upstream
-guid: c1c2d4a4cfe6c3e4e9a6002daabdaf68
-=======
-guid: e805033ed986ce94ab1cbcee7155f013
->>>>>>> Stashed changes
+guid: 052a8eb0ea649c8409de523eccd3ccdc
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -24,10 +20,7 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
-<<<<<<< Updated upstream
-=======
     flipGreenChannel: 0
->>>>>>> Stashed changes
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
@@ -71,10 +64,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
-<<<<<<< Updated upstream
-=======
   swizzle: 50462976
->>>>>>> Stashed changes
   cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
@@ -153,10 +143,6 @@ TextureImporter:
     nameFileIdTable: {}
   spritePackingTag: 
   pSDRemoveMatte: 0
-<<<<<<< Updated upstream
-  pSDShowRemoveMatteOption: 0
-=======
->>>>>>> Stashed changes
   userData: 
   assetBundleName: 
   assetBundleVariant: 
