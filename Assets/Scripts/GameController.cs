@@ -27,6 +27,12 @@ public class GameController : MonoBehaviour
         Vector2 newVelocity = new Vector2(horizontalMovement, verticalMovement);
         GetComponent<Rigidbody2D>().velocity = newVelocity * playerSpeed;
 
+        Vector2 moveDirection = gameObject.GetComponent<Rigidbody2D>().velocity;
+        if (moveDirection != Vector2.zero)
+        {
+            float angle = Mathf.Atan2(moveDirection.x, -moveDirection.y) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        }
 
         if (Input.GetAxis("Fire1") > 0 && timer > fireRate)
         {
