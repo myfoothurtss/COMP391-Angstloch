@@ -16,7 +16,6 @@ public class GameController : MonoBehaviour
     public float hf = 0.0f;
     public float vf = 0.0f;
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -53,11 +52,12 @@ public class GameController : MonoBehaviour
         anim.SetFloat("Movement", vf);
     }
 
-        // Update is called once per frame
-        void Update()
-        {
+    // Update is called once per frame
+    void Update()
+    {
             if (Input.GetAxis("Fire1") > 0 && timer > fireRate)
             {
+                anim.SetBool("Is_attacking", true);
                 //GameObject.instantiate();
                 GameObject goObj;
                 goObj = Instantiate(swordSwing, swordSwingSpawn.transform.position, swordSwingSpawn.transform.rotation);
@@ -65,9 +65,11 @@ public class GameController : MonoBehaviour
                 Destroy(goObj, 1);
                 timer = 0;
             }
+            else
+            {
+                anim.SetBool("Is_attacking", false);
+            }
             timer += Time.deltaTime;
         }
-
-    
 }
 
