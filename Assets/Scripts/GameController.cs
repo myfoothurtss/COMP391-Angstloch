@@ -1,3 +1,4 @@
+using Mono.Cecil.Cil;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,11 +12,17 @@ public class GameController : MonoBehaviour
     public float timer = 0;
     private Rigidbody2D rBody;
 
+    public Animator anim;
+    public float hf = 0.0f;
+    public float vf = 0.0f;
+
+
     // Start is called before the first frame update
     void Start()
     {
         playerSpeed = 1;
         rBody = GetComponent<Rigidbody2D>();
+        anim = this.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -23,33 +30,44 @@ public class GameController : MonoBehaviour
     {
         float horizontalMovement;
         float verticalMovement;
-        horizontalMovement = Input.GetAxis("Horizontal");
-        verticalMovement = Input.GetAxis("Vertical");
+        horizontalMovement = Input.GetAxisRaw("Horizontal");
+        verticalMovement = Input.GetAxisRaw("Vertical");
+
 
         Vector2 newVelocity = new Vector2(horizontalMovement, verticalMovement);
         rBody.velocity = newVelocity * playerSpeed;
 
-        Vector2 moveDirection = rBody.velocity;
-        if (moveDirection != Vector2.zero)
+        hf = horizontalMovement > 0.01f ? horizontalMovement : horizontalMovement < -0.01f ? 1 : 0;
+        vf = verticalMovement > 0.01f ? verticalMovement : verticalMovement < -0.01f ? 1 : 0;
+        if (horizontalMovement < -0.01f)
         {
-            float angle = Mathf.Atan2(moveDirection.x, -moveDirection.y) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+            this.gameObject.transform.localScale = new Vector3(-1, 1, 1);
         }
+        else
+        {
+            this.gameObject.transform.localScale = new Vector3(1, 1, 1);
+        }
+
+        anim.SetFloat("Horizontal", hf);
+        anim.SetFloat("Vertical", verticalMovement);
+        anim.SetFloat("Movement", vf);
     }
+
         // Update is called once per frame
         void Update()
         {
             if (Input.GetAxis("Fire1") > 0 && timer > fireRate)
             {
-            //GameObject.instantiate();
-            GameObject goObj;
-            goObj = Instantiate(swordSwing, swordSwingSpawn.transform.position, swordSwingSpawn.transform.rotation);
-            goObj.transform.Rotate(new Vector3(0, 0, 90));
-            Destroy (goObj, 1);
-            timer = 0;
+                //GameObject.instantiate();
+                GameObject goObj;
+                goObj = Instantiate(swordSwing, swordSwingSpawn.transform.position, swordSwingSpawn.transform.rotation);
+                goObj.transform.Rotate(new Vector3(0, 0, 90));
+                Destroy(goObj, 1);
+                timer = 0;
             }
             timer += Time.deltaTime;
         }
-        
+
+    
 }
 
