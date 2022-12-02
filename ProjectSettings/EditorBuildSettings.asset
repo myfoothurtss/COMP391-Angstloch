@@ -8,4 +8,13 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 8a8fec086d0ab1942a7a642dcd9b479a
+  - enabled: 1
+    path: Assets/Scenes/AngstlochLEVEL1.unity
+    guid: 78186d3cd50bf0849b31ecd6ddaad24c
+  - enabled: 1
+    path: Assets/Scenes/VictoryScreen.unity
+    guid: 4b873d9c7f15ee442b785a31636df53f
   m_configObjects: {}
