@@ -57,19 +57,15 @@ public class GameController : MonoBehaviour
     {
             if (Input.GetAxis("Fire1") > 0 && timer > fireRate)
             {
-                anim.SetBool("SwordSwing", true);
-                //GameObject.instantiate();
+            //GameObject.instantiate();
+                
                 GameObject goObj;
                 goObj = Instantiate(swordSwing, swordSwingSpawn.transform.position, swordSwingSpawn.transform.rotation);
                 goObj.transform.Rotate(new Vector3(0, 0, 90));
                 Destroy(goObj, 1);
                 timer = 0;
             }
-            else
-            {
-                anim.SetBool("SwordSwing", false);
-            }
             timer += Time.deltaTime;
-        }
+    }
 }
 
