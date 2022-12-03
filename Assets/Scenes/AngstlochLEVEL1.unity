@@ -1390,6 +1390,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &776535194 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5825165247181122050, guid: 8aaafad474ee8294e9949f287c065402, type: 3}
+  m_PrefabInstance: {fileID: 5825165246216978667}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &777881985
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2062,6 +2067,44 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5825165247181122049, guid: 8aaafad474ee8294e9949f287c065402, type: 3}
   m_PrefabInstance: {fileID: 5825165246216978667}
   m_PrefabAsset: {fileID: 0}
+--- !u!61 &1318628075
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776535194}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.32, y: 0.32}
+    newSize: {x: 0.32, y: 0.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.32, y: 0.32}
+  m_EdgeRadius: 0
+--- !u!114 &1318628077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776535194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d842976fd18980428a89ae445ba7ba1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1324206768
 GameObject:
   m_ObjectHideFlags: 0
@@ -16290,6 +16333,10 @@ PrefabInstance:
     - target: {fileID: 4652101582101439958, guid: 5e5dbb7724a0ff244af74de10ba514cb, type: 3}
       propertyPath: m_SortingOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4848302753446882992, guid: 5e5dbb7724a0ff244af74de10ba514cb, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
