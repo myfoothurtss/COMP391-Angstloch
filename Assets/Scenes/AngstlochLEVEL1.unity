@@ -16472,6 +16472,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.14, y: 0.22}
   m_EdgeRadius: 0
+--- !u!4 &1912439518 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6928987608528005083, guid: 3161bf4a222a6dd4badcb1569f3d3c6f, type: 3}
+  m_PrefabInstance: {fileID: 6928987607980652139}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1972748074
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16549,7 +16554,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.01199805, y: -0.027921557}
+  m_Offset: {x: 0.01199805, y: -0.050194502}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -16560,7 +16565,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.14010936, y: 0.22479224}
+  m_Size: {x: 0.14901857, y: 0.21333742}
   m_EdgeRadius: 0
 --- !u!95 &1985460225
 Animator:
@@ -17052,9 +17057,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6928987608024927188, guid: 3161bf4a222a6dd4badcb1569f3d3c6f, type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 1985460225}
+    - target: {fileID: 6928987608024927188, guid: 3161bf4a222a6dd4badcb1569f3d3c6f, type: 3}
       propertyPath: swordSwing
       value: 
       objectReference: {fileID: 7458806817858661293, guid: 12a54b70ccd578549bd10c069e53f7f8, type: 3}
+    - target: {fileID: 6928987608024927188, guid: 3161bf4a222a6dd4badcb1569f3d3c6f, type: 3}
+      propertyPath: attackLocation
+      value: 
+      objectReference: {fileID: 1912439518}
     - target: {fileID: 6928987608024927189, guid: 3161bf4a222a6dd4badcb1569f3d3c6f, type: 3}
       propertyPath: m_RootOrder
       value: 2
