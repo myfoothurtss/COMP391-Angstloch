@@ -9,6 +9,4 @@ Vincent
 
 Ethan
 
-Omer
-
 Will
