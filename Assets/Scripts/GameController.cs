@@ -16,6 +16,11 @@ public class GameController : MonoBehaviour
     public float hf = 0.0f;
     public float vf = 0.0f;
 
+    public Transform attackLocation;
+    public float attackRange;
+    public LayerMask enemies;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -40,11 +45,17 @@ public class GameController : MonoBehaviour
         vf = verticalMovement > 0.01f ? verticalMovement : verticalMovement < -0.01f ? 1 : 0;
         if (horizontalMovement < -0.01f)
         {
+            anim.SetBool("isMoving", true);
             this.gameObject.transform.localScale = new Vector3(-1, 1, 1);
         }
         else
         {
             this.gameObject.transform.localScale = new Vector3(1, 1, 1);
+            anim.SetBool("isMoving", true);
+        }
+        if (horizontalMovement == 0)
+        {
+            anim.SetBool("isMoving", false);
         }
 
         anim.SetFloat("Horizontal", hf);
@@ -57,15 +68,25 @@ public class GameController : MonoBehaviour
     {
             if (Input.GetAxis("Fire1") > 0 && timer > fireRate)
             {
-            //GameObject.instantiate();
-                
+                anim.SetBool("swordSwing", true);
+                Collider2D[] damage = Physics2D.OverlapCircleAll(attackLocation.position, attackRange, enemies);
+                //GameObject.instantiate();
                 GameObject goObj;
                 goObj = Instantiate(swordSwing, swordSwingSpawn.transform.position, swordSwingSpawn.transform.rotation);
                 goObj.transform.Rotate(new Vector3(0, 0, 90));
                 Destroy(goObj, 1);
                 timer = 0;
+                for (int i = 0; i < damage.Length; i++)
+                {
+                    Destroy(damage[i].gameObject);
+                }
+            }
+            else
+            {
+                anim.SetBool("swordSwing", false);
             }
             timer += Time.deltaTime;
     }
 }
+
 
